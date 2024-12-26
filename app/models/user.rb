@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_one_attached :profile_image
   has_many :favorites, dependent: :destroy
   has_many :book_comments, dependent: :destroy
+  has_many :user_rooms, dependent: :destroy
+  has_many :chats, dependent: :destroy
+  has_many :rooms, through: :user_rooms
 
 
   #フォローしている関連付け
