@@ -10,6 +10,7 @@
       <h2>Books</h2>
       <%= render 'books/index',books: @books %>
 
+       <%= render "posts_on_date_form", user: @user %>
 
       
       <h3>投稿数の前日比・先週比</h3>
@@ -158,6 +159,9 @@
         });
       </script>
 
+
+
+        
 
           </div>
         </div>

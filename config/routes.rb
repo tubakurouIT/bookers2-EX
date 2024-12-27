@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "/search", to: "searches#search"
 
   resources :chats, only: [:show, :create, :destroy]
+
+  get "posts_on_date" => "users#posts_on_date"
   
 end
   
