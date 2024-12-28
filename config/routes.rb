@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get "posts_on_date" => "users#posts_on_date"
   
-  resources :groups, only: [:new, :index, :show, :create, :edit, :update]
+  resources :groups, only: [:new, :index, :show, :create, :edit, :update] do
+    resource :group_users, only: [:create, :destroy]
+  end
 end
   
