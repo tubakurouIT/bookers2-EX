@@ -10,6 +10,10 @@
   </tr>
 
 
+  
+
+
+
   <tr>
      <th>follows</th>
      <th><%= link_to user.followings.count, user_followings_path(user) %></th>
@@ -28,6 +32,10 @@
   </tr>
 
 </table>
+
+  
+
+<% unless user.guest_user? %>
    <div class='row'>
       <% if current_user != user %>
           <td><%= render "relationships/btn", user: user, options: { class:""} %></td>
@@ -36,4 +44,5 @@
                <i class="fas fa-user-cog"></i>
           <% end %>
       <% end %>
-</div>
+  </div>
+<% end %>
