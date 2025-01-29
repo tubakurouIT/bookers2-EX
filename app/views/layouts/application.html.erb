@@ -19,6 +19,9 @@
         
         <div class="d-flex justify-content-center mb-2" >
           <%= render "searches/form" %>
+          <% if user_signed_in? %>
+            <%= render 'tagsearches/tagsearch' %>
+          <% end %>
         </div>
 
         <%= yield %>

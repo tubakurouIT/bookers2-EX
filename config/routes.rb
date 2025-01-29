@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   resources :chats, only: [:show, :create, :destroy]
 
+  get 'tagsearches/search', to: 'tagsearches#search'
+  
   get "posts_on_date" => "users#posts_on_date"
   
   resources :groups, only: [:new, :index, :show, :create, :edit, :update] do
